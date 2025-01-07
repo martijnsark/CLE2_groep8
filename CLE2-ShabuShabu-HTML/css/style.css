@@ -4,33 +4,48 @@
 /*yellow #DABF4A*/
 /*dark brown #22150D*/
 /*brown #4A351E*/
+:root {
+    --shabu-red: #E42229;
+    --shabu-white: #FFFFFF;
+    --shabu-yellow: #DABF4A;
+    --shabu-black: #0A0608;
+    --shabu-darkbrown: #22150D;
+    --shabu-brown: #4A351E;
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
+
 }
 
 body {
-    background-color: #0A0608;
+    background-color: var(--shabu-black);
 }
 
 h1 {
-    font-size: 2rem;
-    color: #E42229;
+    font-size: 3rem;
+    color: var(--shabu-red);
 }
-
+.shabu-title{
+    font-size: 5rem;
+    color: var(--shabu-yellow);
+    font-family: 'Imagination Station', sans-serif;
+}
 p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif ;
     padding: 5px 0;
 }
 
 nav {
-    background-color: #FFFFFF;
-    padding: 15px 25px;
-
+    background-color: var(--shabu-white);
+    padding: 30px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif ;
 }
 
 nav img {
@@ -40,13 +55,13 @@ nav img {
 nav a {
     padding: 0 15px;
     text-decoration: none;
-    color: #0A0608;
+    color: var(--shabu-black);
 
     transition: all 0.5s ease;
 }
 
 nav a:hover {
-    border-bottom: 2px solid #E42229;
+    border-bottom: 2px solid var(--shabu-red);
 }
 
 header {
@@ -61,44 +76,58 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
-    color: #FFFFFF;
-    border-bottom: 3px solid #000000;
+    color: var(--shabu-white);
 }
 
 .header-content {
     display: flex;
     align-items: center;
     gap: 50px;
+    margin: 50px;
 }
 
 .half-header {
     flex: 1;
 }
 
-header a {
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #FFFFFF;
-    background-color: #22150D;
-    border: 1px solid #22150D;
-    border-radius: 5px;
-
-    transition: all 1s ease;
+header a:hover {
 }
 
-header a:hover {
-    background-color: #DABF4A;
-    border: 1px solid #DABF4A;
+header a {
+    flex: 1;
+    transition: all 1s ease;
+    background-color: var(--shabu-red);
+    color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px var(--shabu-black);
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    max-width: 300px;
+    margin: 0px 150px;
 }
 
 footer {
-    background-color: #4A351E;
+    display: flex;
+    background-color: var(--shabu-brown);
     padding: 50px 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-icons{
+    display: flex;
+    gap: 100px;
 }
 
 footer a {
     text-decoration: none;
-    color: #FFFFFF;
-
+    color: var(--shabu-white);
 }
