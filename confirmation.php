@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <div class="left-column">
+        <img src="images/Shabu_Shabu_Logo.png" alt="ShabuShabu Logo">
+    </div>
+    <div class="right-column">
+        <a href="index.html">Home</a>
+        <a href="#">Over ons</a>
+        <a href="reservation.html">Reserveren</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+<header>
+    <h1>Reservering bevestigd</h1>
+    <p>Hartelijk dank voor uw reservering. Deze hebben wij in goede orde ontvangen</p>
+</header>
+<footer>
+    <a href="https://www.facebook.com/shabushabu.nl/?locale=nl_NL">Facebook</a>
+    <a href="https://www.instagram.com/restaurant_shabushabu/?hl=nl">Instagram</a>
+</footer>
+</body>
+</html>

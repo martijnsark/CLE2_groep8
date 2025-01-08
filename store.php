@@ -6,9 +6,9 @@ include 'includes/connection.php';
 
 // getting posted content from form.html
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $firstname = $_POST ['naam'];
-    $lastname = $_POST ['achternaam'];
-    $email = $_POST ['name'];
+    $firstname = $_POST ['name'];
+    $lastname = $_POST ['sirName'];
+    $email = $_POST ['email'];
 
 
     //sent the posted data to the list of reservations
