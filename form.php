@@ -40,12 +40,25 @@
                 <form action="store.php" method="POST">
                     <div class="formfield">
                         <div class="stack">
-                            <label for="firstname">Voornaam*</label>
-                            <input type="text" name="first_name" id="first_name" placeholder="First name" value="<?=($_POST['first_name'] ?? '') ?>" required>
+                            <label for="first_name">Voornaam*</label>
+                            <input type="text" name="first_name" id="first_name" placeholder="First name" value="<?=($_POST['first_name'] ?? '') ?>">
                         </div>
+                        <div class="error"> 
+                             <!-- Error message -->
+                             <?php if (isset($errors['first_name'])): ?>
+                                 <p class="help is-danger"><?=($errors['first_name']) ?></p>
+                             <?php endif; ?>
+                        </div>
+
                         <div class="stack">
-                            <label for="sir_name">Achternaam*</label>
-                            <input type="text" name="sir_name" id="sir_name" placeholder="Last name" value="<?=($_POST['sir_name'] ?? '') ?>" required>
+                            <label for="last_name">Achternaam*</label>
+                            <input type="text" name="last_name" id="last_name" placeholder="Last name" value="<?=($_POST['last_name'] ?? '') ?>">
+                        </div>
+                        <div class="error"> 
+                            <!-- Error message -->
+                            <?php if (isset($errors['last_name'])): ?>
+                                <p class="help is-danger"><?=($errors['last_name']) ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
 

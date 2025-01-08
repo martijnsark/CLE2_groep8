@@ -7,21 +7,46 @@ include 'includes/connection.php';
 // getting posted content from form.html
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstname = $_POST ['first_name'];
-    $lastname = $_POST ['sir_name'];
+    $lastname = $_POST ['last_name'];
     $email = $_POST ['email'];
     $telnumber = $_POST ['phone'];
 
 
+    // Empty error array variable
+    $errors = [];
+
+    if (empty($firstname)) {
+        $errors['first_name'] = "Voornaam is verplicht.";
+    }
+
+    if (empty($lastname)) {
+        $errors['last_name'] = "Achternaam is verplicht.";
+    }
+
+    //if error update errors onto form.php and stop
+    if (!empty($errors)) {
+        include 'form.php';
+        exit;
+    }
+
     //sent the posted data to the list of reservations
     $query  = "INSERT INTO personal_details (firstname, lastname, email, telnumber)
                VALUES ('$firstname', '$lastname', '$email', '$telnumber')";
-    mysqli_query($db, $query);
+
+    //execute querry
+    $result = mysqli_query($db, $query);
 
 
 
-    // Redirect back to index.html
-    header('Location: index.html');
-    exit();
+   // query worked
+   if ($result) {
+        // Redirect to the main page
+        header("Location: index.php");
+        exit;
+    } else {
+        // Display error message if something went wrong with the query
+        die("Error: " . mysqli_error($db));
+    }
 }
 
  
