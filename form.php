@@ -55,6 +55,12 @@
                     </div>
 
                     <div class="stack">
+                        <label for="phone">Telefoonnummer*</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Telefoonnummer" value="<?=($_POST['phone'] ?? '') ?>" required>
+                    </div>
+
+
+                    <div class="stack">
                         <label for="question">Opmerkingen</label>
                         <input type="text" name="question" id="question">
                     </div>

@@ -9,11 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstname = $_POST ['first_name'];
     $lastname = $_POST ['sir_name'];
     $email = $_POST ['email'];
+    $telnumber = $_POST ['phone'];
 
 
     //sent the posted data to the list of reservations
-    $query  = "INSERT INTO personal_details (firstname, lastname, email)
-               VALUES ('$firstname', '$lastname', '$email')";
+    $query  = "INSERT INTO personal_details (firstname, lastname, email, telnumber)
+               VALUES ('$firstname', '$lastname', '$email', '$telnumber')";
     mysqli_query($db, $query);
 
 
