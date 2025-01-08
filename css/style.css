@@ -153,6 +153,7 @@ footer a {
 
 .half-container {
     flex: 1;
+    min-height: 50vh;
 }
 
 form {
@@ -178,6 +179,7 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
+
 }
 
 
