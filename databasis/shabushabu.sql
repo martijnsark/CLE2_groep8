@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 07, 2025 at 02:43 PM
--- Server version: 8.4.2
--- PHP Version: 8.3.13
+-- Host: db:3306
+-- Generation Time: Jan 08, 2025 at 09:44 AM
+-- Server version: 8.0.34
+-- PHP Version: 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,15 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `available_slots` (
   `id` int NOT NULL,
   `date` date NOT NULL,
-  `hours` time NOT NULL
+  `hours` time NOT NULL,
+  `available` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `available_slots`
---
-
-INSERT INTO `available_slots` (`id`, `date`, `hours`) VALUES
-(1, '0000-00-00', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -59,13 +53,6 @@ CREATE TABLE `reservations` (
   `telnumber` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `reservations`
---
-
-INSERT INTO `reservations` (`id`, `location`, `menu_choice`, `amount_people`, `date`, `time`, `firstname`, `lastname`, `email`, `telnumber`) VALUES
-(1, 'Rotterdam', 'Lunch', 2, '2025-01-22', '16:30:00', 'rick', 'smith', 'iamnotreal@gmail.com', 627833626);
-
 -- --------------------------------------------------------
 
 --
@@ -77,13 +64,6 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(1, 'real@email', 'realpassword');
 
 --
 -- Indexes for dumped tables
