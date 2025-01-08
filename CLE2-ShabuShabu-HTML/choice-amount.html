@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choice and Amount</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <div class="left-column">
+        <img src="images/Shabu_Shabu_Logo.png" alt="ShabuShabu Logo">
+    </div>
+    <div class="right-column">
+        <a href="index.html">Home</a>
+        <a href="#">Over ons</a>
+        <a href="reservation.html">Reserveren</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+<header>
+    <h1>Sushi Restaurant Den Haag</h1>
+    <p>Heeft u zin in heerlijke verse sushi? Dan bent u bij <strong>SHABU SHABU</strong> in Den Haag aan het juiste
+        adres. Bij
+        ons sushi restaurant in Den Haag kunt u genieten van de lekkerste sushi en warme gerechten van de
+        grill. In ons all you can eat restaurant dineert u samen in Aziatische sferen. Lees snel verder en ontdek ons
+        unieke all you can taste menu.
+    </p>
+</header>
+<main>
+    <div class="center-container">
+        <section>
+            <h2>MAAK HIER UW RESERVERING</h2>
+            <form>
+                <div class="stack">
+                    <label for="choice">Uw keuze*</label>
+                    <div class="button-container">
+                        <div class="buttons">
+                            <input type="radio" name="menu" id="menu" required>
+                            <label for="lunch">Lunch</label>
+                        </div>
+                        <div class="buttons">
+                            <input type="radio" id="menu" name="menu">
+                            <label for="diner">Diner</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="stack">
+                    <label for="amount">Aantal personen:*</label>
+                    <select id="amount" name="amount" required>
+                        <option value="" disabled selected>0</option>
+                        <option value="lunch">2</option>
+                        <option value="diner">3</option>
+                        <option value="diner">4</option>
+                        <option value="diner">5</option>
+                        <option value="diner">6</option>
+                    </select>
+                </div>
+
+                <button type="next">Volgende</button>
+            </form>
+        </section>
+    </div>
+</main>
+<footer>
+    <a href="https://www.facebook.com/shabushabu.nl/?locale=nl_NL">Facebook</a>
+    <a href="https://www.instagram.com/restaurant_shabushabu/?hl=nl">Instagram</a>
+</footer>
+</body>
+</html>
