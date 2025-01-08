@@ -23,7 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['last_name'] = "Achternaam is verplicht.";
     }
 
-    //if error update errors onto form.php and stop
+    if (empty($email)) {
+        $errors['email'] = "Email is verplicht.";
+    } 
+
+    if (empty($telnumber)) {
+        $errors['phone'] = "Telefoon nummer is verplicht.";
+    } elseif (strlen($telnumber) < 9 || !is_numeric($telnumber)) {
+        $errors['phone'] = "Telefoon nummer moet minstens 9 cijfers zijn";
+    }
+
+    //if error update errors onto form.php and return to form.php
     if (!empty($errors)) {
         include 'form.php';
         exit;

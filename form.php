@@ -39,6 +39,7 @@
             <section>
                 <form action="store.php" method="POST">
                     <div class="formfield">
+
                         <div class="stack">
                             <label for="first_name">Voornaam*</label>
                             <input type="text" name="first_name" id="first_name" placeholder="First name" value="<?=($_POST['first_name'] ?? '') ?>">
@@ -49,6 +50,7 @@
                                  <p class="help is-danger"><?=($errors['first_name']) ?></p>
                              <?php endif; ?>
                         </div>
+
 
                         <div class="stack">
                             <label for="last_name">Achternaam*</label>
@@ -62,14 +64,28 @@
                         </div>
                     </div>
 
+
                     <div class="stack">
                         <label for="email">E-mail*</label>
-                        <input type="email" name="email" id="email" placeholder="Email" value="<?=($_POST['email'] ?? '') ?>" required>
+                        <input type="email" name="email" id="email" placeholder="Email" value="<?=($_POST['email'] ?? '') ?>">
                     </div>
+                    <div class="error"> 
+                            <!-- Error message -->
+                            <?php if (isset($errors['email'])): ?>
+                                <p class="help is-danger"><?=($errors['email']) ?></p>
+                            <?php endif; ?>
+                    </div>
+
 
                     <div class="stack">
                         <label for="phone">Telefoonnummer*</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Telefoonnummer" value="<?=($_POST['phone'] ?? '') ?>" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Telefoonnummer" value="<?=($_POST['phone'] ?? '') ?>">
+                    </div>
+                    <div class="error"> 
+                            <!-- Error message -->
+                            <?php if (isset($errors['phone'])): ?>
+                                <p class="help is-danger"><?=($errors['phone']) ?></p>
+                            <?php endif; ?>
                     </div>
 
 
