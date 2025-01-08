@@ -14,9 +14,9 @@
         <img src="images/Shabu_Shabu_Logo.png" alt="ShabuShabu Logo">
     </div>
     <div class="right-column">
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="#">Over ons</a>
-        <a href="form.html">Reserveren</a>
+        <a href="form.php">Reserveren</a>
         <a href="#">Contact</a>
     </div>
 </nav>
@@ -40,18 +40,18 @@
                 <form action="store.php" method="POST">
                     <div class="formfield">
                         <div class="stack">
-                            <label for="name">Voornaam*</label>
-                            <input type="text" name="name" id="name" placeholder="First name" required>
+                            <label for="firstname">Voornaam*</label>
+                            <input type="text" name="first_name" id="first_name" placeholder="First name" value="<?=($_POST['first_name'] ?? '') ?>" required>
                         </div>
                         <div class="stack">
-                            <label for="name">Achternaam*</label>
-                            <input type="text" name="sirName" id="name" placeholder="Last name" required>
+                            <label for="sir_name">Achternaam*</label>
+                            <input type="text" name="sir_name" id="sir_name" placeholder="Last name" value="<?=($_POST['sir_name'] ?? '') ?>" required>
                         </div>
                     </div>
 
                     <div class="stack">
                         <label for="email">E-mail*</label>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email" value="<?=($_POST['email'] ?? '') ?>" required>
                     </div>
 
                     <div class="stack">

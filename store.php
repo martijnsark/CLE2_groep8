@@ -6,13 +6,13 @@ include 'includes/connection.php';
 
 // getting posted content from form.html
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $firstname = $_POST ['name'];
-    $lastname = $_POST ['sirName'];
+    $firstname = $_POST ['first_name'];
+    $lastname = $_POST ['sir_name'];
     $email = $_POST ['email'];
 
 
     //sent the posted data to the list of reservations
-    $query  = "INSERT INTO reservations (firstname, lastname, email)
+    $query  = "INSERT INTO personal_details (firstname, lastname, email)
                VALUES ('$firstname', '$lastname', '$email')";
     mysqli_query($db, $query);
 
