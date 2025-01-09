@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($email)) {
         $errors['email'] = "Email is verplicht.";
-    } 
+    }
 
     if (empty($telnumber)) {
         $errors['phone'] = "Telefoonnummer is verplicht.";
@@ -40,16 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     //sent the posted data to the list of reservations
-    $query  = "INSERT INTO personal_details (firstname, lastname, email, telnumber)
+    $query = "INSERT INTO personal_details (firstname, lastname, email, telnumber)
                VALUES ('$firstname', '$lastname', '$email', '$telnumber')";
 
     //execute querry
     $result = mysqli_query($db, $query);
 
 
-
-   // query worked
-   if ($result) {
+    // query worked
+    if ($result) {
         // Redirect to the main page
         header("Location: index.php");
         exit;
@@ -59,7 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
- 
 
 //close connection with database
 mysqli_close($db);
