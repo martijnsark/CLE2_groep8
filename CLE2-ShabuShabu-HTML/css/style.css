@@ -12,8 +12,9 @@
     --shabu-darkbrown: #22150D;
     --shabu-brown: #4A351E;
     --shabu-big-font: 'Imagination Station', sans-serif;
-    --shabu-standard-font: 'Open Sans', sans-serif;;
+    --shabu-standard-font: 'Open Sans', sans-serif ;;
 }
+
 
 * {
     box-sizing: border-box;
@@ -24,7 +25,6 @@
 
 body {
     background-color: var(--shabu-black);
-    font-family: var(--shabu-standard-font);
 }
 
 h1 {
@@ -32,15 +32,14 @@ h1 {
     color: var(--shabu-red);
 }
 
-.shabu-title {
+.shabu-title{ /*ONLY H1*/
     font-size: 5rem;
     color: var(--shabu-yellow);
     font-family: var(--shabu-big-font);
 }
-
 p {
     font-size: 1.5rem;
-
+    font-family: var(--shabu-standard-font);
     padding: 5px 0;
 }
 
@@ -51,7 +50,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    font-family: 'Open Sans', sans-serif;
 }
 
 nav img {
@@ -72,12 +70,10 @@ nav a:hover {
 
 header {
     min-height: calc(90vh - 80px);
-
     background-image: url('../images/ShabuShabu-Flower-Image.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,9 +90,6 @@ header {
 
 .half-header {
     flex: 1;
-}
-
-header a:hover {
 }
 
 header a {
@@ -120,12 +113,13 @@ header a {
     margin: 0px 150px;
 }
 
-.center-container {
+.center-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
+
 
 footer {
     display: flex;
@@ -158,6 +152,11 @@ footer a {
 .half-container {
     flex: 1;
     min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    gap: 30px;
 }
 
 form {
@@ -167,7 +166,7 @@ form {
     padding: 20px;
     max-width: 35vw;
     margin: auto;
-
+    font-family: var(--shabu-standard-font);
 }
 
 .formfield {
@@ -178,40 +177,40 @@ form {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-
-}
 
 
+textarea,
+input[type="tel"],
 input[type="text"],
 input[type="email"] {
+    resize: none;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+    transition: border-color 0.3s;
 }
 
+input[type="tel"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus {
     border-color: var(--shabu-red);
     outline: none;
 }
 
+textarea,
+input[type="tel"],
 input[type="checkbox"],
 input[type="radio"] {
     accent-color: var(--shabu-red); /* Change the checked color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
 }
 
 .formfield-checkbox {
     margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
 }
 
 button {
@@ -230,23 +229,14 @@ button:hover {
     background-color: var(--shabu-yellow);
 }
 
-.formfield-checkbox {
+.button-container{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    align-items: baseline;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+    justify-content: left
 }
 
-.button-container {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-around;
-}
-
-.buttons {
+.buttons{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -266,6 +256,7 @@ select:focus {
     outline: none;
 }
 
+
 /*form errors*/
 .error {
     color: var(--shabu-red);
@@ -279,11 +270,11 @@ select:focus {
 
 
 label {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 400;
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--shabu-red);
+    color: var(--shabu-black);
     border-radius: 0.5rem;
 }
 
@@ -295,7 +286,7 @@ input {
     padding: 0;
     font-size: 1rem;
     color: var(--shabu-brown);
-    width: 100%;
+    /*width: 100%;*/
     margin-top: 0.5rem;
 }
 
@@ -400,5 +391,7 @@ table {
     font-weight: 400;
     font-size: 0.75rem;
 }
+
+
 
 
