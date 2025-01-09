@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/imagination-station" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav>
+    <div class="left-column">
+        <img src="images/Shabu_Shabu_Logo.png" alt="ShabuShabu Logo">
+    </div>
+    <div class="right-column">
+        <a href="index.html">Home</a>
+        <a href="about.html">Over ons</a>
+        <a href="reservation.html">Reserveren</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<header>
+    <h1 class="shabu-title">Contact</h1>
+
+</header>
+<main>
+    <div class="center-container">
+        <form action="store.php" method="POST">
+            <div class="formfield">
+                <div class="stack">
+                    <label for="first_name">Voornaam*</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+                </div>
+                <div class="stack">
+                    <label for="last_name">Achternaam*</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+                </div>
+            </div>
+
+            <div class="stack">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="stack">
+                <label for="subject">Onderwerp*</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Kies een onderwerp</option>
+                    <option value="question">Vraag</option>
+                    <option value="Vacature">Vacature</option>
+                    <option value="question">Question</option>
+                </select>
+            </div>
+
+            <div class="stack">
+                <label for="message">Schrijf hier je bericht*</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            </div>
+
+            <div class="stack">
+                <label for="category">Subscribe to Newsletter?*</label>
+                <div class="button-container">
+                    <div class="buttons">
+                        <input type="radio" name="radio" id="yes" required>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="buttons">
+                        <input type="radio" id="no" name="radio">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formfield-checkbox">
+                <input type="checkbox" name="tac" id="tac" required>
+                <label for="tac">I agree to the Terms and Conditions*</label>
+            </div>
+
+            <button type="submit">Verzenden</button>
+
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="foot-icons">
+        <a href="https://www.facebook.com/shabushabu.nl/?locale=nl_NL" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/restaurant_shabushabu/?hl=nl" class="fa fa-instagram"></a>
+    </div>
+</footer>
+</body>
+</html>
