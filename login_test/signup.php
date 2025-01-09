@@ -10,8 +10,9 @@ INCLUDE_ONCE 'header.php';
         <section class ="signup-form">
             <h2>sign up</h2>
             <form action="signup.inc.php" method="POST"> 
-                <input type="email" name="email" placeholder="email...">
-                <input type="password" name="password" placeholder="password...">
+                <input type="text" name="fullname" placeholder="Full name...">
+                <input type="email" name="email" placeholder="Email...">
+                <input type="password" name="password" placeholder="Password...">
             <form>
         </section>
     </div>
