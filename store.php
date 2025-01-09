@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
 
     if (empty($telnumber)) {
-        $errors['phone'] = "Telefoon nummer is verplicht.";
+        $errors['phone'] = "Telefoonnummer is verplicht.";
     } elseif (strlen($telnumber) < 9 || !is_numeric($telnumber)) {
         $errors['phone'] = "Telefoonnummer moet minstens 9 cijfers zijn";
     }
