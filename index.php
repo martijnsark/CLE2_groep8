@@ -46,7 +46,7 @@
                 genieten.
             </p>
         </div>
-        <a class="button-reserveer" href="reservation.html">Reserveer nu!</a>
+        <a class="button-reserveer" href="form.php">Reserveer nu!</a>
     </div>
 </header>
 <main>
