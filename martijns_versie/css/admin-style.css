@@ -1,0 +1,25 @@
+:root {
+    --bulma-primary-h: 358deg;
+    --bulma-primary-s: 78%;
+    --bulma-primary-l: 51%;
+    --bulma-link-h: 49deg;
+    --bulma-link-s: 66%;
+    --bulma-link-l: 57%;
+    --bulma-info-h: 330deg;
+    --bulma-info-s: 25%;
+    --bulma-info-l: 3%;
+    --bulma-success-h: 23deg;
+    --bulma-success-s: 45%;
+    --bulma-success-l: 9%;
+    --bulma-warning-h: 31deg;
+    --bulma-warning-s: 42%;
+    --bulma-warning-l: 20%;
+    --bulma-danger-h: 0deg;
+    --bulma-danger-s: 0%;
+    --bulma-danger-l: 100%;
+}
+
+
+
+
+
