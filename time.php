@@ -1,7 +1,7 @@
 <?php
 
 // Include db.
-require 'auth/config.php';
+require 'includes/connection.php';
 
 // Start session.
 session_start();
@@ -11,7 +11,7 @@ $date = $_SESSION['date'];
 
 // Prepare query to find open hours.
 $queryAvailable = "SELECT * FROM `available_slots` WHERE `available` = 1 AND `date` = '$date' ";
-$resultAvailable = mysqli_query($conn, $queryAvailable);
+$resultAvailable = mysqli_query($db, $queryAvailable);
 
 // Display selected date.
 $date = date('l,d, F, Y ', strtotime($date));

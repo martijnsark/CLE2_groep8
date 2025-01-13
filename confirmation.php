@@ -1,7 +1,7 @@
 <?php
 
 // Include config + send.php (for email)
-require 'auth/config.php';
+require 'includes/connection.php';
 require 'send.php';
 
 /*
