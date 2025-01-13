@@ -4,7 +4,7 @@
     </div>
     <div class="right-column">
         <a href="index.php">Home</a>
-        <a href="#">Over ons</a>
+        <a href="about.php">Over ons</a>
         <a href="form.php">Reserveren</a>
         <a href="#">Contact</a>
         <a href="signup.php">Sign up</a>
