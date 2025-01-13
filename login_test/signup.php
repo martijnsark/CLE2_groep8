@@ -2,6 +2,31 @@
 
 INCLUDE_ONCE 'header.php';
 
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emptyinput") {
+        echo "<p>Laat geen invoer veld leeg!</p>";
+    } 
+    else if ($_GET["error"] == "invaliduid") {
+        echo "<p>Gebruikers naam bevat verboden tekens!</p>";
+    } 
+    else if ($_GET["error"] == "invalidemail") {
+        echo "<p>Geef een echte email!</p>";
+    } 
+    else if ($_GET["error"] == "passwordsdontmatch") {
+        echo "<p>Je gaf twee verschillende wachtwoorden!</p>";
+    } 
+    else if ($_GET["error"] == "usernametaken") {
+        echo "<p>Gebruikers naam bestaat al!</p>";
+    } 
+    else if ($_GET["error"] == "stmtfailed") {
+        echo "<p>Iets ging fout... probeer het opnieuw.</p>";
+    } 
+    else if ($_GET["error"] == "none") {
+        echo "<p>U heeft een account aangemaakt!</p>";
+    }
+}
+
+
 ?>
 
 
