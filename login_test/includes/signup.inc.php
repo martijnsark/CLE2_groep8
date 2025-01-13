@@ -12,25 +12,24 @@ if (isset($_POST["submit"])) {
     require_once 'connection.php';
     require_once 'functions.inc.php';
 
-
     if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
     if (invalidUid($username) !== false) {
-        header("location: ../signup.php?error=invaliduid");
+        header("location: ../signup.php?error=invalidUid");
         exit();
     }
     if (invalidemail($email) !== false) {
-        header("location: ../signup.php?error=invalidemail");
+        header("location: ../signup.php?error=invalidEmail");
         exit();
     }
     if (pwdMatch($pwd, $pwdRepeat) !== false) {
-        header("location: ../signup.php?error=passwordsdontMatch");
+        header("location: ../signup.php?error=passwordsDontMatch");
         exit();
     }
     if (uidExists($db, $username, $email) !== false) {
-        header("location: ../signup.php?error=usernametaken");
+        header("location: ../signup.php?error=usernameTaken");
         exit();
     }
 
