@@ -1,7 +1,5 @@
 <?php
-
 INCLUDE_ONCE 'header.php';
-
 ?>
 
 

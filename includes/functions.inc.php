@@ -66,7 +66,7 @@ function uidExists($db, $username, $email) {
     mysqli_stmt_close($stmt);
 }
 
-
+//creates user in database
 function createUser($db, $name, $email, $username, $pwd) {
     $sql = "INSERT INTO users(usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($db);
@@ -81,6 +81,41 @@ function createUser($db, $name, $email, $username, $pwd) {
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../index.php?error=none");
+    header("location: ../signup.php?error=none");
     exit();
+}
+
+//check if user filled all login fields
+function emptyInputLogin($username, $pwd) {
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+//check if user correctly logged in
+function loginUser($db, $username, $pwd) {
+    $uidExists = uidExists($db, $username, $username);
+
+    if ($uidExists === false) {
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }
+
+    $pwdHashed = $uidExists["usersPwd"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }
+    else if ($checkPwd === true) { 
+        session_start();
+        $_SESSION["userid"] = $uidExists["usersId"];
+        $_SESSION["useruid"] = $uidExists["usersUid"];
+        header("location: ../index.php?error=loggedin");
+        exit();
+    }
 }

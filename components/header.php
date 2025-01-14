@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <header>
         <div class="header-content">
             <div class="half-header">

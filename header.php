@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -19,8 +23,15 @@
         <a href="about.php">Over ons</a>
         <a href="index.php">Reserveren</a>
         <a href="contact.php">Contact</a>
-        <a href="signup.php">Sign up</a>
-        <a href="login.php">Log in</a>
+        <?php 
+        if (isset($_SESSION["useruid"])) {
+           echo "<a href='profile.php'>Profile page</a>";
+           echo "<a href='includes/logout.inc.php'>Log out</a>";
+        } else {
+            echo "<a href='signup.php'>Sign up</a>";
+            echo "<a href='login.php'>Log in</a>";
+        }
+        ?>
 </nav>
 
 
