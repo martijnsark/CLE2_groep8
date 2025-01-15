@@ -22,8 +22,8 @@ INCLUDE_ONCE 'header.php';
             <form action="includes/login.inc.php" method="POST"> 
                 <input type="text" name="uid" placeholder="Username/email...">
                 <input type="password" name="pwd" placeholder="Password...">
-                <button type="submit" name="submit">Log In<button>
-            <form>
+                <button type="submit" name="submit">Log In</button>
+            </form>
         </section>
     </div>
 </header>
