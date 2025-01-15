@@ -23,8 +23,8 @@ INCLUDE_ONCE 'header.php';
                 else if ($_GET["error"] == 'passwordsdontmatch') {
                     echo"<p>Wachtwoorden zijn niet het zelfde<p>";
                 }
-                else if ($_GET["error"] == 'usernametaken') {
-                    echo"<p>Gebruikers naam is al in bezit!<p>";
+                else if ($_GET["error"] == 'useralreadyexists') {
+                    echo"<p>Een gebruiker met deze email en/of username bestaat al!<p>";
                 }
                 else if ($_GET["error"] == 'stmtfailed') {
                     echo"<p>iets ging fout, probeer het opnieuw.<p>";

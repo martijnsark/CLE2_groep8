@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
         exit();
     }
     if (uidExists($db, $username, $email) !== false) {
-        header("location: ../signup.php?error=usernametaken");
+        header("location: ../signup.php?error=useralreadyexists");
         exit();
     }
 
