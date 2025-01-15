@@ -1,5 +1,5 @@
 <?php
-
+//show header
 INCLUDE_ONCE 'header.php';
 
 
@@ -10,7 +10,10 @@ INCLUDE_ONCE 'header.php';
     <div class="header-content">
         <section class ="signup-form">
             <?php 
+            //is there a "error" in the URL yes? go ahead no? skip
             if (isset($_GET["error"])) {
+
+                //check which error was given and execute fitting error message
                 if ($_GET["error"] == 'emptyinput') {
                     echo"<p>Niet alle nodige informatie was gegeven!<p>";
                 }
@@ -42,7 +45,7 @@ INCLUDE_ONCE 'header.php';
                 <input type="password" name="pwd" placeholder="Password...">
                 <input type="password" name="pwdrepeat" placeholder="Repeat password...">
                 <button type="submit" name="submit">Sign Up<button>
-            <form>
+            </form>
         </section>
     </div>
 </header>
@@ -51,6 +54,7 @@ INCLUDE_ONCE 'header.php';
 </main>
 
 <?php
+//show footer
 INCLUDE_ONCE 'footer.php';
 
 ?>
