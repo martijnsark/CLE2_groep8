@@ -12,15 +12,13 @@
     --shabu-darkbrown: #22150D;
     --shabu-brown: #4A351E;
     --shabu-big-font: 'Imagination Station', sans-serif;
-    --shabu-standard-font: 'Open Sans', sans-serif ;;
+    --shabu-standard-font: 'Open Sans', sans-serif;
 }
 
 
 * {
     box-sizing: border-box;
     margin: 0;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 
 body {
@@ -35,11 +33,11 @@ h1 {
 .shabu-title{ /*ONLY H1*/
     font-size: 5rem;
     color: var(--shabu-yellow);
-    font-family: var(--shabu-big-font);
+    font-family: var(--shabu-big-font), sans-serif;
 }
 p {
     font-size: 1.5rem;
-    font-family: var(--shabu-standard-font);
+    font-family: var(--shabu-standard-font), sans-serif;
     padding: 5px 0;
 }
 
@@ -94,7 +92,7 @@ header {
 
 header a {
     flex: 1;
-    transition: all 1s ease;
+    transition: all 1s ease, 0.5s;
     background-color: var(--shabu-red);
     color: #ffffff;
     padding: 20px;
@@ -102,7 +100,6 @@ header a {
     border: none;
     text-align: center;
     text-transform: uppercase;
-    transition: 0.5s;
     background-size: 200% auto;
     box-shadow: 0 0 20px var(--shabu-black);
     border-radius: 10px;
@@ -110,13 +107,13 @@ header a {
     cursor: pointer;
     font-weight: bold;
     max-width: 300px;
-    margin: 0px 150px;
+    margin: 0 150px;
 }
 
 .center-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -152,6 +149,7 @@ footer a {
 .half-container {
     flex: 1;
     min-height: 50vh;
+    min-width: 40vw;
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -164,9 +162,9 @@ form {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 35vw;
+    min-width: 35vw;
     margin: auto;
-    font-family: var(--shabu-standard-font);
+    font-family: var(--shabu-standard-font), sans-serif;
 }
 
 .formfield {
@@ -175,34 +173,6 @@ form {
 
 .stack {
     margin-bottom: 15px;
-}
-
-
-
-textarea,
-input[type="tel"],
-input[type="text"],
-input[type="email"] {
-    resize: none;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="email"]:focus {
-    border-color: var(--shabu-red);
-    outline: none;
-}
-
-textarea,
-input[type="tel"],
-input[type="checkbox"],
-input[type="radio"] {
-    accent-color: var(--shabu-red); /* Change the checked color */
 }
 
 .formfield-checkbox {
@@ -260,6 +230,7 @@ select:focus {
 /*form errors*/
 .error {
     color: var(--shabu-red);
+    font-size: 0.8rem;
 }
 
 .error p {
@@ -277,22 +248,34 @@ label {
     color: var(--shabu-black);
     border-radius: 0.5rem;
 }
-
+textarea,
 input {
     display: block;
-    border: none;
     border-radius: 0.25rem;
-    border: 1px solid transparent;
+    border: 1px solid #333333;
     padding: 0;
     font-size: 1rem;
     color: var(--shabu-brown);
     /*width: 100%;*/
     margin-top: 0.5rem;
+
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+
+    accent-color: var(--shabu-red);
 }
+
 
 input:focus {
     outline: none;
+    border-color: var(--shabu-red);
+    outline: none;
 }
+
 
 #ui-datepicker-div {
     display: none;
@@ -310,9 +293,10 @@ table {
 
 .ui-datepicker-calendar thead th {
     padding: 0.25rem 0;
+    font-family: var(--shabu-standard-font), sans-serif;
     text-align: center;
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: bold;
     color: var(--shabu-red);
 }
 
@@ -397,3 +381,6 @@ table {
 #dropdownMenu {
     display: none;
 }
+
+/* Signup & login CSS */
+

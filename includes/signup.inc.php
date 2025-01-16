@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+
 
 //check if user actually filled form through the submit button
 if (isset($_POST["submit"])) {

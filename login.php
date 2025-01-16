@@ -1,4 +1,6 @@
 <?php
+// Rewritten by Sissi 15-01-2025
+
 /** @var $db mysqli */
 
 require_once('includes/connection.php');
@@ -55,12 +57,12 @@ if (isset($_POST['submit'])) {
                 exit();
             } else {
                 // Credentials not valid
-                $errors['loginFailed'] = 'Username/password incorrect';
+                $errors['loginFailed'] = 'De combinatie van de opgegeven inloggevens kloppen niet, probeer het opnieuw.';
             }
             //error incorrect log in
         } else {
             // User doesn't exist
-            $errors['loginFailed'] = 'Username/password incorrect';
+            $errors['loginFailed'] = 'De combinatie van de opgegeven inloggevens kloppen niet, probeer het opnieuw.';
         }
         //error incorrect log in
 
