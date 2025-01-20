@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shabu Shabu</title>
 
-    <!-- Script + styles. -->
+    <!-- Script + styles.-->
     <script src="main.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.cdnfonts.com/css/imagination-station" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <!-- Load components. -->
+    <!-- Load components.-->
     <?php require 'components/nav.php'; ?>
     <?php require 'components/header.php'; ?>
     <?php require 'components/footer.php'; ?>

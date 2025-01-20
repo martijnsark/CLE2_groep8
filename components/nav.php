@@ -4,12 +4,14 @@
 
 <nav>
     <div class="left-column">
+        <a href="index.php">
         <img src="images/Shabu_Shabu_Logo.png" alt="ShabuShabu Logo">
+        </a>
     </div>
     <div class="right-column">
-        <a href="index.php">Home</a>
+<!--        <a href="index.php">Home</a>-->
         <a href="about.php">Over ons</a>
-        <a href="index.php">Reserveren</a>
+<!--        <a href="index.php">Reserveren</a>-->
         <a href="contact.php">Contact</a>
         <?php 
         if (isset($_SESSION["user"])) {

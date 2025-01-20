@@ -15,6 +15,69 @@
     --shabu-standard-font: 'Open Sans', sans-serif;
 }
 
+/*@keyframes bg {*/
+/*    0% {*/
+/*        opacity: 0; !* Start fully transparent *!*/
+/*        transform: translateY(-20px); !* Start slightly above *!*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1; !* End fully visible *!*/
+/*        transform: translateY(0); !* End at original position *!*/
+/*    }*/
+/*}*/
+
+@keyframes ft {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes nv {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes hdr {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: -500px;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        margin-right: -500px;
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -23,17 +86,28 @@
 
 body {
     background-color: var(--shabu-black);
+    body {
+        transition: opacity 0.2s ease; /* Transition for opacity */
+        opacity: 1; /* Initial opacity */
+    }
+
+    .fade-out {
+        opacity: 0; /* Fade out effect */
+    }
 }
 
 h1 {
     font-size: 3rem;
     color: var(--shabu-red);
+
 }
 
 .shabu-title { /*ONLY H1*/
     font-size: 5rem;
     color: var(--shabu-yellow);
     font-family: var(--shabu-big-font), sans-serif;
+    animation-name: slide-right;
+    animation-duration: 0.5s;
 }
 
 p {
@@ -49,6 +123,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    animation-name: nv;
+    animation-duration: 0.5s;
 }
 
 nav img {
@@ -70,6 +146,9 @@ nav a:hover {
 header {
     min-height: calc(90vh - 80px);
     background-image: url('../images/ShabuShabu-Flower-Image.png');
+    animation-name: hdr;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -125,6 +204,8 @@ footer {
     padding: 50px 25px;
     justify-content: center;
     align-items: center;
+    animation-name: ft;
+    animation-duration: 0.5s;
 }
 
 .foot-icons {
