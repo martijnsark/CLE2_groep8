@@ -12,7 +12,7 @@
         <a href="index.php">Reserveren</a>
         <a href="contact.php">Contact</a>
         <?php 
-        if (isset($_SESSION["useruid"])) {
+        if (isset($_SESSION["user"])) {
            echo "<a href='profile.php'>Profile page</a>";
            echo "<a href='includes/logout.inc.php'>Log out</a>";
         } else {
