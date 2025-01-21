@@ -86,6 +86,7 @@
 
 body {
     background-color: var(--shabu-black);
+
     body {
         transition: opacity 0.2s ease; /* Transition for opacity */
         opacity: 1; /* Initial opacity */
@@ -498,7 +499,7 @@ table {
     }
 
     nav img {
-        /*min-width: 23vw;*/
+        min-width: 23vw;
     }
 
     /* home page */
@@ -517,5 +518,25 @@ table {
         padding: 15px;
         font-size: 15px;
     }
+
+    /* about page */
+    .center-container {
+        display: block;
+    }
+
+    .half-container {
+        min-height: 30vh;
+    }
+
+    /* contact page */
+    label {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    /* sign up page */
 }
 
